@@ -1,5 +1,8 @@
-<h1>Rails Zoo</h1>
 
+<h3><%= link_to "Add New Animal", new_animal_path %></h3>
+<br>
+<h3>Current Animals</h3>
 <% @animals.each do |animal| %>
-<p><%= "#{animal.name} is a #{animal.species} who is #{animal.age} years old." %></p>
+  <%= link_to animal.name, animal_path(animal.id), class: 'animal'%>
+  <br>
 <% end %>

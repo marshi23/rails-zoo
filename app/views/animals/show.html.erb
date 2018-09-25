@@ -1,10 +1,11 @@
-<% if @task.nil? %>
+<% if @animal.nil? %>
 <h1> 404 Not Found </h1>
 <% else %>
 
-<h1>Animal Profile</h1>
+<h2>Animal Profile</h2>
 
-<h2><%= @animal.name %></h2>
-<p><%= @animal.species %></p>
-<p><%= @animal.age %></p>
+<h3><%= @animal.name %></h3>
+<p><%= @animal.name %> is a <%= @animal.species %>.</p>
+<p>They are <%= @animal.age %> year(s) old.</p>
+<img src="http://lorempixel.com/400/200" />
 <%end%>

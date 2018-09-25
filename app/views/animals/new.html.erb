@@ -1,0 +1,17 @@
+<h1>Add New Animal</h1>
+
+<%= form_with model: @animal do |f| %>
+  <p>Enter Animal Details:</p>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :species %>
+    <%= f.text_field :species %>
+    <br>
+    <%= f.label :age %>
+    <%= f.text_field :age%>
+    <br>
+
+    <%= f.submit "Save Animal", class: "save-animal-button" %>
+<%end%>
