@@ -1,0 +1,5 @@
+<h1>Rails Zoo</h1>
+
+<% @animals.each do |animal| %>
+<p><%= "#{animal.name} is a #{animal.species} who is #{animal.age} years old." %></p>
+<% end %>

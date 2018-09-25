@@ -1,0 +1,10 @@
+<% if @task.nil? %>
+<h1> 404 Not Found </h1>
+<% else %>
+
+<h1>Animal Profile</h1>
+
+<h2><%= @animal.name %></h2>
+<p><%= @animal.species %></p>
+<p><%= @animal.age %></p>
+<%end%>
