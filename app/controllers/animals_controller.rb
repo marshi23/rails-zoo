@@ -21,7 +21,29 @@ class AnimalsController < ApplicationController
     end
   end
 
+  def edit
+    @animal = Animal.find(params[:id].to_i)
+  end
+
+  def update
+    animal = Animal.find(params[:id].to_i)
+    animal.update(animal_params)
+
+    if animal.save
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
+
+  def destroy
+    animal = Animal.find(params[:id].to_i)
+    animal.destroy
+    redirect_to root_path
+  end
+
   private
+
   def not_found
     render :notfound
   end

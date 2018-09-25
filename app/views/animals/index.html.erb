@@ -1,8 +1,15 @@
 
-<h3><%= link_to "Add New Animal", new_animal_path %></h3>
-<br>
+<h3><%= link_to "Add New Animal", new_animal_path %></h3><br>
+
 <h3>Current Animals</h3>
+
 <% @animals.each do |animal| %>
-  <%= link_to animal.name, animal_path(animal.id), class: 'animal'%>
+  <%= link_to animal.name, animal_path(animal.id), class: 'animal'%><br>
+
+  <%= link_to "Edit", edit_animal_path(animal.id)%>
+  <!-- # we never really explicitly use the AnimalsController.update method, how is this being done?  -->
+  <%= link_to "Delete", animal_path(animal.id), method: :delete%>
+  <!-- # if we're using this delete, why do we need to define the one in comtroller. This is a model medthod, no? -->
   <br>
-<% end %>
+  <br>
+<%end%>
